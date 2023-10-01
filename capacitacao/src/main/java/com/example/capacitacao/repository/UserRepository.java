@@ -13,5 +13,6 @@ public interface UserRepository extends CrudRepository<User, Integer>{
     // Lista de todos os usuários
     List <User> findAll();
 
+    // Método que busca um id de usuário
     User findById (int id);
 }

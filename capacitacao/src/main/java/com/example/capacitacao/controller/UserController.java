@@ -38,13 +38,6 @@ public class UserController {
         return repositorio.findById(id);
     }
 
-    /*
-     * @PutMapping("/atualiza")
-     * public User update (@RequestBody User obj){
-     * return repositorio.save(obj);
-     * }
-     */
-
     // Rota de atualização de dados de algum usuário
     @PutMapping("/atualiza")
     public User update(@RequestBody User obj) {
@@ -58,7 +51,7 @@ public class UserController {
             existingUser.setSenha(obj.getSenha());
         }
 
-        // Salve o usuário atualizado no repositório
+        // Salva o usuário atualizado no repositório
         return repositorio.save(existingUser);
     }
 
